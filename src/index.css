@@ -54,6 +54,11 @@ img {
 /*
  * Стили компонента Searchbar
  */
+
+ .form {
+  display: flex;
+ }
+
 .searchbar {
   top: 0;
   left: 0;
@@ -86,7 +91,7 @@ img {
   overflow: hidden;
 }
 
-.searchForm-button {
+.button {
   display: inline-block;
   width: 48px;
   height: 48px;
@@ -101,7 +106,7 @@ img {
   outline: none;
 }
 
-.searchForm-button:hover {
+.button:hover {
   opacity: 1;
 }
 
@@ -117,26 +122,34 @@ img {
   border: 0;
 }
 
-.searchForm-input {
+.input {
   display: inline-block;
   width: 100%;
   font: inherit;
-  font-size: 20px;
+  font-size: 26px;
   border: none;
   outline: none;
   padding-left: 4px;
   padding-right: 4px;
 }
 
-.searchForm-input::placeholder {
+.input::placeholder {
   font: inherit;
-  font-size: 18px;
+  font-size: 24px;
 }
 
 /*
  * Стили компонента ImageGallery
  */
-.imageGallery {
+.gallery {
+  /* margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 30px;
+  flex-basis: calc((100% - 60px) / 4);
+  align-items: center;
+  justify-content: space-around; */
+ 
   display: grid;
   max-width: calc(100vw - 48px);
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -152,7 +165,7 @@ img {
 /*
  * Стили компонента ImageGalleryItem
  */
-.imageGalleryItem {
+.gallery-item {
   border-radius: 2px;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
@@ -196,7 +209,7 @@ img {
 * Стили компонента Buton (Load more)
 */
 .button {
-  padding: 8px 16px;
+  padding: 4px 16px;
   border-radius: 2px;
   background-color: #3f51b5;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -207,7 +220,7 @@ img {
   text-decoration: none;
   cursor: pointer;
   font-family: inherit;
-  font-size: 18px;
+  font-size: 22px;
   line-height: 24px;
   font-style: normal;
   font-weight: 500;
@@ -219,4 +232,45 @@ img {
 .button:hover,
 .button:focus {
   background-color: #303f9f;
+}
+
+.button_load {
+  padding: 8px 16px;
+  border-radius: 2px;
+  background-color: #3f51b5;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: center;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+  border: 0;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 22px;
+  line-height: 24px;
+  font-style: normal;
+  font-weight: 500;
+  max-width: 180px;
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+}
+
+.button_load:hover,
+.button_load:focus {
+  background-color: #303f9f;
+}
+
+.puff-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.noImages {
+  font-size: 50px;
+  text-align: center;
+
 }
