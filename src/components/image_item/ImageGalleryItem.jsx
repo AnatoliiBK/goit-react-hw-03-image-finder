@@ -5,12 +5,13 @@ export class ImageGalleryItem extends Component {
     const { webformatURL, alt, onClick } = this.props;
     return (
       <li className="gallery-item" onClick={onClick}>
-        <img src={webformatURL} alt={alt} loading="lazy" />
+        <img src={webformatURL} alt={alt} className='imageGalleryItem-image' />
       </li>
     );
   }
 }
 
+// loading="lazy"
 
 // export class ImageGalleryItem extends Component {
 //     render() {
