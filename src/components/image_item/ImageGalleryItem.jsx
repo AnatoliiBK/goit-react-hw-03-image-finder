@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import PropTypes from "prop-types";
+
 
 export class ImageGalleryItem extends Component {
   render() {
@@ -11,17 +13,10 @@ export class ImageGalleryItem extends Component {
   }
 }
 
-// loading="lazy"
 
-// export class ImageGalleryItem extends Component {
-//     render() {
-//       const { imageUrl, alt, onClick } = this.props;
-//       return (
-//         <li className="gallery-item" onClick={onClick}>
-//           <img src={imageUrl} alt={alt} width={"300"} height={"200"}/>
-//         </li>
-//       );
-//     }
-//   }
-
+ImageGalleryItem.propTypes = {
+  webformatURL: PropTypes.string.isRequired,
+  alt: PropTypes.string,
+  onClick: PropTypes.func.isRequired,
+};
 
