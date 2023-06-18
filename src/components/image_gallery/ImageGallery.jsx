@@ -22,7 +22,7 @@ export class ImageGallery extends Component {
 
     if (images.length === 0 && !showNoImagesMessage) {
       this.showNoImagesMessageWithDelay();
-    } else if (images.length > 0 && showNoImagesMessage) {
+    } else if (images.length >= 0 && showNoImagesMessage) {
       this.hideNoImagesMessage();
     }
   }
@@ -35,7 +35,7 @@ export class ImageGallery extends Component {
         showNoImagesMessage: true,
         isLoading: false,
       });
-    }, 3000);
+    }, 2000);
   }
 
   hideNoImagesMessage() {
